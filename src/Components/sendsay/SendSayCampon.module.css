@@ -1,0 +1,61 @@
+.SendSayCampon {
+  position: absolute;
+width: 740px;
+height: 201px;
+left: 300px;
+top: 860px;
+}
+.SendSayCampon h3 {
+  position: absolute;
+left: 0px;
+top: 0px;
+
+font-family: SF Pro Text;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height, or 125% */
+
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+.SendSayCampon p {
+margin-top: 60px;
+font-family: SF Pro Text;
+font-size: 16px;
+line-height: 25px;
+/* identical to box height, or 156% */
+
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+.SendSayCampon table {
+  margin-top: 10%;
+  width: 100%;
+  font-size: 16px;
+  border-collapse: collapse;
+  text-align: left;
+}
+.SendSayCampon th {
+  font-weight: normal;
+  color: black;
+  border-bottom: 2px solid #DDDDDD;
+  padding: 10px 8px;
+}
+.SendSayCampon td {
+  color: black;
+  padding: 9px 8px;
+  transition: .3s linear;
+}
+.black {
+  color: black;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
