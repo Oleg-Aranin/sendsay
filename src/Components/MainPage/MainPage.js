@@ -13,34 +13,22 @@ import {onChange} from '../../store/actions/action'
 function MainPage(props) {
 
   const inputArray = Object.keys(props.formControls).map((controlName, index) => {
-         const control = props.formControls[controlName]
+         const {validation, ...control} = props.formControls[controlName]
 
          return (
            index < 5 ?
            <Input
              key={controlName + index}
-             type={control.type}
-             value={control.value}
-             valid={control.valid}
-             touched={control.touched}
-             label={control.label}
-             shouldValidate={!!control.validation}
-             errorMessage={control.errorMessage}
-             placeholder={control.placeholder}
+             shouldValidate={!!validation}
              onChange={e => props.onChange(e, controlName)}
+             {...control}
            />
          :
          <Textarea
            key={controlName + index}
-           type={control.type}
-           value={control.value}
-           valid={control.valid}
-           touched={control.touched}
-           label={control.label}
-           shouldValidate={!!control.validation}
-           errorMessage={control.errorMessage}
-           placeholder={control.placeholder}
+           shouldValidate={!!validation}
            onChange={e => props.onChange(e, controlName)}
+           {...control}
          />
          )
        })
