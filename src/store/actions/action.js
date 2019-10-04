@@ -33,8 +33,9 @@ export function handleDrop(acceptedFiles, rejectFiles) {
 
 
      if (allSizeLetter <= getState().app.detailsFiles.maxSizeLetter) {
-           const stateFiles = [...getState().app.files]
-           acceptedFiles.forEach(item => stateFiles.push(item))
+
+           const stateFiles = [...getState().app.files, ...acceptedFiles]
+
 
      dispatch(pushFiles(stateFiles))
 
@@ -184,16 +185,14 @@ export function validateControl(value, validation) {
    let statusRes = await sendsay.request(res2)
 
    if(statusRes) {
-  let fileValue = {
-    date: statusRes.obj.dt,
-    status: statusRes.obj.status,
-    topic: getState().app.formControls.topicOfTheLetter.value
+     let fileValue = {
+        date: statusRes.obj.dt,
+        status: statusRes.obj.status,
+        topic: getState().app.formControls.topicOfTheLetter.value
   }
 
-     let statusRespose = [...getState().app.responseStatus]
+     let statusRespose = [...getState().app.responseStatus, fileValue]
 
-
-  statusRespose.push(fileValue)
 
   dispatch(pushFilesToState(statusRespose))
 
