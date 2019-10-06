@@ -1,0 +1,37 @@
+.ManageFiles * {
+box-sizing: border-box;
+display: inline-block;
+}
+.ManageFiles {
+  margin-left: 15px;
+  margin-top: 30px;
+}
+.boxFile {
+  width: 345px;
+  height: 40px;
+  /* border: 1px solid #DDDDDD; */
+  overflow: hidden;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.boxFileName {
+  display: inline-block;
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  font-size: 16px;
+line-height: 30px;
+border: 1px solid #DDDDDD;
+}
+.boxFileDel {
+  display: inline-block;
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  font-size: 16px;
+line-height: 30px;
+border: 1px solid #DDDDDD;
+color: #FF6666;
+cursor: pointer;
+}
